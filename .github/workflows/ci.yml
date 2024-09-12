@@ -34,6 +34,23 @@ jobs:
     - name: Run Pylint (Static analysis)
       run: |
         pylint hw2_debugging.py rand.py
+      continue-on-error: true
+    - name: Set Pylint badge status
+      run: |
+        if [ $? -eq 0 ]; then
+          echo "PYLINT_STATUS=Pass" >> $GITHUB_ENV
+        else
+          echo "PYLINT_STATUS=Fail" >> $GITHUB_ENV
+        
+    - name: Create Pylint Badge
+      uses: schneegans/dynamic-badges-action@v1.7.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: 81f66816760d5b8b280d5e0a19c2bcd0
+        filename: pylint.json
+        label: Pylint
+        message: ${{ env.PYLINT_STATUS }}
+        color: ${{ env.PYLINT_STATUS == 'Pass' && 'green' || 'red' }}
 
     - name: Run pyright (Style check)
       run: |

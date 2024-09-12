@@ -25,7 +25,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install autopep8 pylint bandit pytest
+        pip install autopep8 pylint pyright pytest
 
     - name: Autopep8 (Auto format code)
       run: |

@@ -45,7 +45,7 @@ jobs:
       uses: schneegans/dynamic-badges-action@v1.7.0
       with:
         auth: ${{ secrets.GIST_SECRET }}
-        gistID: b954ff2a5c0c6e804c4b0320de3b0a58
+        gistID: 5cd07126dc5719dcc6dd27bd8dca7842
         filename: pylint.json
         label: Pylint
         message: ${{ env.PYLINT_STATUS }}

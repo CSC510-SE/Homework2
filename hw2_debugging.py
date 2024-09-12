@@ -63,3 +63,4 @@ arr = [x for x in rand.random_array([None] * 20) if x is not None]
 arr_out = merge_sort(arr)
 
 print(arr_out)
+

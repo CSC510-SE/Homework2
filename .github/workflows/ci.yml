@@ -33,11 +33,13 @@ jobs:
 
     - name: Run Pylint (Static analysis)
       run: |
-        pylint hw2_debugging.py rand.py || exit_code=$?
+        pylint hw2_debugging.py rand.py
+        exit_code=$?
         if [ $exit_code -eq 0 ]; then
           echo "PYLINT_STATUS=Pass" >> $GITHUB_ENV
         else
           echo "PYLINT_STATUS=Fail" >> $GITHUB_ENV
+        fi
         
     - name: Create Pylint Badge
       uses: schneegans/dynamic-badges-action@v1.7.0

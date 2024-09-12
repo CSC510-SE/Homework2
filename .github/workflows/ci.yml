@@ -35,9 +35,9 @@ jobs:
       run: |
         pylint hw2_debugging.py rand.py
 
-    - name: Run Bandit (Style check)
+    - name: Run pyright (Style check)
       run: |
-        bandit hw2_debugging.py rand.py
+        pyright hw2_debugging.py rand.py
 
     - name: Run Tests with pytest
       run: |

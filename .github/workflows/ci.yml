@@ -45,8 +45,8 @@ jobs:
       uses: schneegans/dynamic-badges-action@v1.7.0
       with:
         auth: ${{ secrets.GIST_SECRET }}
-        gistID: 3f2e81a13097bc498007e15cb5a19872
-        filename: pylint.json
+        gistID: eda49634ad4b5d5f829e8ade4d6f138c
+        filename: pyright.json
         label: Pylint
         message: ${{ env.PYLINT_STATUS }}
         color: ${{ env.PYLINT_STATUS == 'Pass' && 'green' || 'red' }}

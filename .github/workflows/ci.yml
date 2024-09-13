@@ -41,11 +41,11 @@ jobs:
           echo "PYLINT_STATUS=Fail" >> $GITHUB_ENV
         fi
     - name: Debug Gist Update
-    run: |
-      echo "Auth Token: ${{ secrets.GIST_SECRET }}"
-      echo "Gist ID: eda49634ad4b5d5f829e8ade4d6f138c"
-      curl -H "Authorization: token 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" https://api.github.com/gists/eda49634ad4b5d5f829e8ade4d6f138c
-        
+      run: |
+        echo "Auth Token: ${{ secrets.GIST_SECRET }}"
+        echo "Gist ID: eda49634ad4b5d5f829e8ade4d6f138c"
+        curl -H "Authorization: token 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" https://api.github.com/gists/eda49634ad4b5d5f829e8ade4d6f138c
+          
     - name: Create Pylint Badge
       uses: schneegans/dynamic-badges-action@v1.7.0
       with:

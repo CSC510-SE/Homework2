@@ -1,5 +1,3 @@
-# .github/workflows/ci.yml
-
 name: Python Static Analysis and Testing
 
 on:
@@ -47,7 +45,6 @@ jobs:
         message: ${{ env.AUTOPEP8_STATUS }}
         color: ${{ env.AUTOPEP8_STATUS == 'Pass' && 'green' || 'red' }}
 
-
     - name: Run Pylint (Static analysis)
       run: |
         pylint hw2_debugging.py rand.py
@@ -66,12 +63,12 @@ jobs:
         filename: pylint.json
         label: Pylint
         message: ${{ env.PYLINT_STATUS }}
-        color: ${{ env.PYLINT_STATUS == 'Pass' ? 'green' || 'red' }}
+        color: ${{ env.PYLINT_STATUS == 'Pass' && 'green' || 'red' }}
 
     - name: Run pyright (Style check)
       run: |
         pyright hw2_debugging.py rand.py
-         exit_code=$?
+        exit_code=$?
         if [ $exit_code -eq 0 ]; then
           echo "PYRIGHT_STATUS=Pass" >> $GITHUB_ENV
         else
@@ -84,20 +81,20 @@ jobs:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: eda49634ad4b5d5f829e8ade4d6f138c
         filename: pyright.json
-        label: Pylint
+        label: Pyright
         message: ${{ env.PYRIGHT_STATUS }}
-        color: ${{ env.PYRIGHT_STATUS == 'Pass' ? 'green' || 'red' }}
+        color: ${{ env.PYRIGHT_STATUS == 'Pass' && 'green' || 'red' }}
 
     - name: Run Tests with pytest
       run: |
         pytest
-         exit_code=$?
+        exit_code=$?
         if [ $exit_code -eq 0 ]; then
           echo "PYTEST_STATUS=Pass" >> $GITHUB_ENV
         else
           echo "PYTEST_STATUS=Fail" >> $GITHUB_ENV
         fi
-     # Create Pytest Badge
+
     - name: Create Pytest Badge
       uses: schneegans/dynamic-badges-action@v1.7.0
       with:
@@ -107,5 +104,3 @@ jobs:
         label: Pytest
         message: ${{ env.PYTEST_STATUS }}
         color: ${{ env.PYTEST_STATUS == 'Pass' && 'green' || 'red' }}
-      
-

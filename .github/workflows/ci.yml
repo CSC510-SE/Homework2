@@ -44,7 +44,7 @@ jobs:
     - name: Create Pylint Badge
       uses: schneegans/dynamic-badges-action@v1.7.0
       with:
-        auth: ${{ secrets.GIST_SECRET }}
+        auth: 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
         gistID: eda49634ad4b5d5f829e8ade4d6f138c
         filename: pyright.json
         label: Pylint

@@ -40,7 +40,7 @@ jobs:
         else
           echo "PYLINT_STATUS=Fail" >> $GITHUB_ENV
         fi
-    - name: Debug Gist Updat
+    - name: Debug Gist Update
       run: |
         echo "Auth Token: ${{ secrets.GIST_SECRET }}"
         echo "Gist ID: eda49634ad4b5d5f829e8ade4d6f138c"

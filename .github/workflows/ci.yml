@@ -48,9 +48,9 @@ jobs:
         gistID: eda49634ad4b5d5f829e8ade4d6f138c
         filename: pyright.json
         label: Pylint
-        message: ${{ env.PYLINT_STATUS }}
-        color: ${{ env.PYLINT_STATUS == 'Pass' && 'green' || 'red' }}
-        forceUpdate: true
+        message: hello
+        color: blue
+    #    forceUpdate: true
 
     - name: Run pyright (Style check)
       run: |

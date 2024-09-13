@@ -11,7 +11,7 @@ This repository contains the implementation of merge sort in `hw2_debugging.py` 
 
 ![Static Badge](https://img.shields.io/badge/platform-linux-2CA5E0?style=for-the-badge&logoColor=white)
 
-![example workflow](https://github.com/CSC510-SE/Homework2/actions/workflows/ci.yml/badge.svg)
+**Pytest**: ![pytest](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/sainath199/a9e2ae393657421b37b65cc6d8c3756e/raw/pytest.json)
 
 ## Continuous Integration Badges
 

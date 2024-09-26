@@ -16,5 +16,6 @@ This repository contains the implementation of merge sort in `hw2_debugging.py` 
 ## Continuous Integration Badges
 
 - [![Pylint](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/sainath199/08bfddaeaa50b18120b40f0118cc6228/raw/pylint.json)](https://github.com/CSC510-SE/Homework2/actions/workflows/ci.yml)
-- **Pyright**: ![Pyright](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/sainath199/eda49634ad4b5d5f829e8ade4d6f138c/raw/pyright.json)
-- **AutoPep8**: ![AutoPep8](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/sainath199/610c5444484d8b7e11764786357f1075/raw/autopep8.json)
+- **Pyright**: [![Pyright](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/sainath199/eda49634ad4b5d5f829e8ade4d6f138c/raw/pyright.json)](https://github.com/CSC510-SE/Homework2/actions/workflows/ci.yml)
+- **AutoPep8**: [![AutoPep8](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/sainath199/610c5444484d8b7e11764786357f1075/raw/autopep8.json)](https://github.com/CSC510-SE/Homework2/actions/workflows/ci.yml)
+
